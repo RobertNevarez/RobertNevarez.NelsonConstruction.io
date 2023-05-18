@@ -1,0 +1,112 @@
+.HerosectionText {
+  max-width: 48rem;
+  padding: 1rem;
+  font-family: sans-serif;
+ 
+  
+}
+.HerosectionText2 {
+  max-width: 51rem;
+  padding: 1rem;
+  font-family: sans-serif;
+  margin-left: -950px;
+  margin-top: 90px;
+  color: white;
+  
+}
+
+.HerosectionText h3{
+  font-size:1.50rem;
+  color: black;
+}
+.HerosectionText2 h3{
+  font-size:1.50rem;
+  color: rgb(255, 255, 255);
+}
+
+.buttonContainer {
+  max-width: 21rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.Herosection {
+  border-radius: 1rem;
+  border: solid var(--button_outline_color);
+  margin: 0 0 2rem 0;
+  display: flex;
+  justify-content: right;
+  width: 150%;
+  height: 700px;
+  margin-left: -300px;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  background-image: url(../../../../public/next3.jpg);
+}
+.Herosection2 {
+
+ 
+
+  justify-content: left;
+  width: 150%;
+  height: 700px;
+  margin-left: -300px;
+
+}
+
+.Herosection h3 {
+  font-weight: 100;
+}
+
+.contentSection {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.heroimage {
+  
+  border-radius: 1rem;
+  justify-content: right;
+}
+
+
+@media only screen and (max-width: 430px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttonContainer button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contentSection > div {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .Herosection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    margin-inline: auto;
+  }
+
+  .heroimage {
+    width: 100%;
+  }
+
+  .heroimage {
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+  }
+}

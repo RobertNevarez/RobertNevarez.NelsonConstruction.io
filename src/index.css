@@ -1,13 +1,284 @@
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding:1rem;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* this is the scroll bar css*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color); 
+  border-radius: 10px;
+  border: solid 2px var(--background-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5; 
+}
+
+/* this is the end of the scroll bar css*/
+
+:root {
+  /* this is the colors*/
+  --main-color: rgb(0, 0, 0);
+  --background-color: rgb(255, 255, 255);
+
+  --h1-size: clamp(3rem, 10vw, 4rem);
+  --h2-size: clamp(2rem, 10vw,3rem);
+  --h3-size: clamp(1rem, 10vw, 2rem);
+  --p-size:1.25rem;
+  --max-width: 1200px;
+  --max-width-text: 650px;
+  --max-width-singleImage: 300px;
+
+  --header-font: "Poppins", sans-serif;
+  --text-font: "jurademibold", jurademibold;
+
+  --button_radius: 0.75em;
+  --button_color: rgb(255, 0, 0);
+  --button_outline_color: #000000;
+
+  --margin-button: 2rem;
+  --margin-top: 20%;
+}
+
+h1 {
+  color: var(--main-color);
+  font-family: var(--header-font);
+  font-size: var(--h1-size);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: var(--h2-size);
+  margin: 0;
+}
+
+h3 {
+  color: var(--main-color);
+  font-family: var(--text-font);
+  font-weight: bold;
+  margin: 0;
+  font-size: var(--h3-size);
+}
+
+p {
+  margin: 0;
+  font-size:var(--p-size);
+  font-family:var(--text-font);
+}
+
+button {
+  /* Variables */
+  margin-top: var(--margin-button);
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  padding: 0;
+  cursor: white;
+  cursor: pointer;
+  width: 10rem;
+  font-family: var(--header-font);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.5em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* this is the card css*/
+
+.card {
+  box-sizing: border-box;
+  max-width: 35rem;
+  width: 100%;
+  height: 30rem;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+  font-weight: bolder;
+  border: 3px solid var(--main-color);
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.card:hover {
+  border: 3px solid var(--main-color);
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.white h2 {
+  color: var(--background-color);
+}
+
+.white .subtext {
+  color: var(--background-color);
+}
+
+.subtext {
+  opacity: 0.75;
+  font-family: var(--text-font);
+  font-weight: lighter;
+}
+
+.textLink {
+  text-decoration: none;
+}
+
+.textLink:hover {
+  text-decoration: none;
+}
+
+/* this is the end of the card css*/
+
+/* this is the pages css*/
+
+.headimage {
+  max-width: var(--max-width);
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.textOne {
+  margin: var(--margin-top) 0 0 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.flex img{
+
+}
+
+.maxwidth{
+  max-width: var(--max-width-text);
+}
+
+.singleImage {
+  border-radius: 1rem;
+  border: solid var(--button_outline_color);
+  max-width: 40em;
+  width:100%;
+  height:720px;
+  margin-top:var(--margin-top);
+}
+.singleImage2 {
+  max-width: 40em;
+  width:100%;
+  height:720px;
+  margin-top:var(--margin-top);
+}
+
+
+.textCenter{
+  margin-inline:auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.processImage{
+  width:100%;
+  height:auto;
+  margin-top:2rem;
+}
+
+.margin-top{
+  margin-top:var(--margin-top);
+}
+
+.userflow{
+  max-width:600px;
+  margin-inline: auto;
+  display: flex;
+}
+
+.smallerImage{
+  max-width:600px;
+}
+
+
+.row {
+  
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  flex-wrap: wrap;
+  line-height: 30px;
+  padding: 1rem;
+
+}
+
+.post-img img{
+  width: 400px;
+  height: 200px;
+}
+.post-desc
+{
+  padding: 1rem;
+}
+
+
+
+
+/* this is the end of the pages css*/
+
+@media only screen and (max-width: 700px) {
+  .card {
+    margin-inline: auto;
+  }
 }

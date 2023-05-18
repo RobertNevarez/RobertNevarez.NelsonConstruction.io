@@ -1,0 +1,21 @@
+.linkedin {
+  display: Flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.linkedin p {
+  font-size: 2rem;
+}
+
+.linkedin i {
+  margin-right: 0.5rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.margin{
+  margin-top:5%;
+}

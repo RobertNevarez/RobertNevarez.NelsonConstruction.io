@@ -1,0 +1,23 @@
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--margin-top);
+}
+
+.buttonContainer .button:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.buttonContainer i:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.buttonContainer i:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
+}
